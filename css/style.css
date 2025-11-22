@@ -62,30 +62,6 @@ body {
   color: var(--primary);
 }
 
-.navbar .navbar-nav a {
-  color: #fff;
-  display: inline-block;
-  font-size: 1.3rem;
-  margin: 0 1rem;
-}
-
-.navbar .navbar-nav a:hover {
-  color: var(--primary);
-}
-
-.navbar .navbar-nav a::after {
-  content: '';
-  display: block;
-  padding-bottom: 0.5rem;
-  border-bottom: 0.1rem solid var(--primary);
-  transform: scaleX(0);
-  transition: 0.2s linear;
-}
-
-.navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.5);
-}
-
 .navbar .navbar-extra a {
   color: #fff;
   margin: 0 0.5rem;
@@ -95,43 +71,8 @@ body {
   color: var(--primary);
 }
 
-#hamburger-menu {
-  display: none;
-}
 
-/* Navbar search form */
-.navbar .search-form {
-  position: absolute;
-  top: 100%;
-  right: 7%;
-  background-color: #fff;
-  width: 50rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: 0.3s;
-}
 
-.navbar .search-form.active {
-  transform: scaleY(1);
-}
-
-.navbar .search-form input {
-  height: 100%;
-  width: 100%;
-  font-size: 1.6rem;
-  color: var(--bg);
-  padding: 1rem;
-}
-
-.navbar .search-form label {
-  cursor: pointer;
-  font-size: 2rem;
-  margin-right: 1.5rem;
-  color: var(--bg);
-}
 
 /* Shopping Cart */
 .shopping-cart {
@@ -144,6 +85,10 @@ body {
   background-color: #fff;
   color: var(--bg);
   transition: 0.3s;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 6rem;
 }
 
 .shopping-cart.active {
@@ -231,7 +176,7 @@ body {
 
 .form-container .checkout-button{
   padding: 6px;
-  background-color: royalblue;
+  background-color: var(--primary);
   color: white;
   font-weight: bold;
   font-size: 1rem;
@@ -262,8 +207,6 @@ body {
 }
 
 
-
-
 .hero .content {
   padding: 1.4rem 7%;
   /* max-width: 60rem; */
@@ -274,7 +217,7 @@ body {
 }
 
 .hero .content h1 {
-  padding-top: 100px;
+  padding-top: 70px;
   font-size: 5em;
   color: #fff;
   text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
@@ -294,27 +237,13 @@ body {
   mix-blend-mode: difference;
 }
 
-.hero .content .cta {
-  margin-top: 1rem;
-  display: inline-block;
-  padding: 1rem 3rem;
-  font-size: 1.4rem;
-  color: #fff;
-  background-color: var(--primary);
-  border-radius: 0.5rem;
-  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
-}
 
 /* About Section */
-.about,
-.menu,
 .products,
 .contact {
   padding: 8rem 7% 1.4rem;
 }
 
-.about h2,
-.menu h2,
 .products h2,
 .contact h2 {
   text-align: center;
@@ -322,38 +251,11 @@ body {
   margin-bottom: 3rem;
 }
 
-.about h2 span,
-.menu h2 span,
 .products h2 span,
 .contact h2 span {
   color: var(--primary);
 }
 
-.about .row {
-  display: flex;
-}
-
-.about .row .about-img {
-  flex: 1 1 45rem;
-}
-
-
-.about .row .content {
-  flex: 1 1 35rem;
-  padding: 0 1rem;
-}
-
-.about .row .content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.about .row .content p {
-  margin-bottom: 0.8rem;
-  font-size: 1.3rem;
-  font-weight: 100;
-  line-height: 1.6;
-}
 
 /* Menu Section */
 .products h2,
@@ -490,19 +392,10 @@ footer .socials a {
   margin: 1rem;
 }
 
-footer .socials a:hover,
-footer .links a:hover {
+footer .socials a:hover {
   color: var(--bg);
 }
 
-footer .links {
-  margin-bottom: 1.4rem;
-}
-
-footer .links a {
-  color: #fff;
-  padding: 0.7rem 1rem;
-}
 
 footer .credit {
   font-size: 0.8rem;
@@ -515,7 +408,6 @@ footer .credit a {
 
 
 
-/* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {
   html {
@@ -529,72 +421,6 @@ footer .credit a {
     font-size: 62.5%;
   }
 
-  #hamburger-menu {
-    display: inline-block;
-  }
-
-  .navbar .navbar-nav {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #fff;
-    width: 30rem;
-    height: 100vh;
-    transition: 0.3s;
-  }
-
-  .navbar .navbar-nav.active {
-    right: 0;
-  }
-
-  .navbar .navbar-nav a {
-    color: var(--bg);
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-  }
-
-  .navbar .navbar-nav a::after {
-    transform-origin: 0 0;
-  }
-
-  .navbar .navbar-nav a:hover::after {
-    transform: scaleX(0.2);
-  }
-
-  .navbar .search-form {
-    width: 90%;
-    right: 2rem;
-  }
-
-  .about .row {
-    flex-wrap: wrap;
-  }
-
-  .about .row .about-img img {
-    height: 24rem;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .about .row .content {
-    padding: 0;
-  }
-
-  .about .row .content h3 {
-    margin-top: 1rem;
-    font-size: 2rem;
-  }
-
-  .about .row .content p {
-    font-size: 1.6rem;
-  }
-
-  .menu p {
-    font-size: 1.2rem;
-  }
-
   .contact .row {
     flex-wrap: wrap;
   }
@@ -605,10 +431,6 @@ footer .credit a {
 
   .contact .row form {
     padding-top: 0;
-  }
-
-  .modal-content {
-    flex-wrap: wrap;
   }
 
   .products .row {

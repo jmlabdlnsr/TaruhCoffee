@@ -1,11 +1,24 @@
 document.addEventListener('alpine:init', () => {
     Alpine.data('products', () => ({
         items: [
-            {id: 1, name: 'Matcha', img: '1.jpg', price: 20000},
-            {id: 2, name: 'Matcha2', img: '1.jpg', price: 22000},
-            {id: 3, name: 'Matcha3', img: '1.jpg', price: 21000},
-            {id: 4, name: 'Matcha4', img: '1.jpg', price: 24000},
-            {id: 5, name: 'Matcha5', img: '1.jpg', price: 22000}
+            {id: 1, name: 'Hot Espresso', img: '1.jpg', price: 18000},
+            {id: 2, name: 'Hot Split Shot', img: '1.jpg', price: 28000},
+            {id: 3, name: 'Hot Magic', img: '1.jpg', price: 23000},
+            {id: 4, name: 'Ice Magic', img: '1.jpg', price: 25000},
+            {id: 5, name: 'Hot Pour Over', img: '1.jpg', price: 20000},
+            {id: 6, name: 'Ice Pour Over', img: '1.jpg', price: 20000},
+            {id: 7, name: 'Hot vanilla Latte', img: '1.jpg', price: 24000},
+            {id: 8, name: 'Ice vanilla Latte', img: '1.jpg', price: 26000},
+            {id: 9, name: 'Hot Caramel Latte', img: '1.jpg', price: 24000},
+            {id: 10, name: 'Ice Caramel Latte', img: '1.jpg', price: 26000},
+            {id: 11, name: 'lavaberry', img: '1.jpg', price: 25000},
+            {id: 12, name: 'The Older', img: '1.jpg', price: 25000},
+            {id: 13, name: 'Mount Blanc', img: '1.jpg', price: 25000},
+            {id: 14, name: 'nagoya', img: '1.jpg', price: 23000},
+            {id: 15, name: 'Hot Chocolatte', img: '1.jpg', price: 22000},
+            {id: 16, name: 'Ice Chocolatte', img: '1.jpg', price: 24000},
+            {id: 17, name: 'Hot Redvelvet Latte', img: '1.jpg', price: 22000},
+            {id: 18, name: 'Ice Redvelvet Latte', img: '1.jpg', price: 24000},
         ]
     }));
 
@@ -75,6 +88,7 @@ checkoutButton.disabled = true;
 
 const form = document.querySelector('#checkoutForm');
 
+
 form.addEventListener('keyup', function(){
     for (let i = 0; i < form.elements.length; i++){
         if(form.elements[i].value.length !== 0){
@@ -113,15 +127,15 @@ checkoutButton.addEventListener('click', async function(e) {
 })
 
 //format pesan wa
-const formatMessage = (obj) =>{
-    return `Test Data Customer
-    Nama : ${obj.name}
-    Email: ${obj.email}
-    No HP: ${obj.phoneNumber}
-Data pesanan:
-${JSON.parse(obj.items).map((item) => `${item.name} (${item.qty} x ${rupiah(item.total)})\n`)}
-TOTAL: ${rupiah(obj.total)}`;
-}
+// const formatMessage = (obj) =>{
+//     return `Test Data Customer
+//     Nama : ${obj.name}
+//     Email: ${obj.email}
+//     No HP: ${obj.phoneNumber}
+// Data pesanan:
+// ${JSON.parse(obj.items).map((item) => `${item.name} (${item.qty} x ${rupiah(item.total)})\n`)}
+// TOTAL: ${rupiah(obj.total)}`;
+// }
 
 //konversi rupiah
 const rupiah = (number) => {

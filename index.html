@@ -32,29 +32,12 @@
   <nav class="navbar" x-data>
     <a href="#" class="navbar-logo">Taruh<span>Coffee</span></a>
 
-    <div class="navbar-nav">
-      <a href="#home">Home</a>
-      <a href="#about">Tentang Kami</a>
-      <a href="#menu">Menu</a>
-      <a href="#products">Produk</a>
-      <a href="#contact">Kontak</a>
-    </div>
-
     <div class="navbar-extra">
-      <a href="#" id="search-button"><i data-feather="search"></i></a>
       <a href="#" id="shopping-cart-button">
         <i data-feather="shopping-cart"></i>
         <span class="qty-badge" x-show="$store.cart.qty" x-text="$store.cart.qty"></span>
       </a>
-      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
     </div>
-
-    <!-- Search Form start -->
-    <div class="search-form">
-      <input type="search" id="search-box" placeholder="search here..." />
-      <label for="search-box"><i data-feather="search"></i></label>
-    </div>
-    <!-- Search Form end -->
 
     <!-- Shopping Cart start -->
     <div class="shopping-cart">
@@ -118,45 +101,20 @@
   <section class="hero" id="home">
     <div class="mask-container">
       <main class="content">
-        <h1>Mari Nikmati Secangkir <span>Kopi</span></h1>
+        <h1>Hangatkan harimu dengan secangkir <span>Kopi pilihan.</span></h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Accusantium, enim.
+          Racikan terbaik, dibuat dengan sepenuh hati.
         </p>
       </main>
     </div>
   </section>
   <!-- Hero Section end -->
 
-  <!-- About Section start -->
-  <section id="about" class="about">
-    <h2><span>Tentang</span> Kami</h2>
-
-    <div class="row">
-      <div class="about-img">
-        <img src="img/tentang-kami.jpg" alt="Tentang Kami" />
-      </div>
-      <div class="content">
-        <h3>Kenapa memilih kopi kami?</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
-          ducimus voluptatum dolor. Et, voluptatum accusantium!
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
-          deserunt iure amet facilis eos a quo cum voluptates molestias nihil.
-        </p>
-      </div>
-    </div>
-  </section>
-  <!-- About Section end -->
-
   <!-- Products Section start -->
   <section class="products" id="products" x-data="products">
     <h2><span>Produk Unggulan</span> Kami</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde eum,
-      ab fuga possimus iste.
+      Pesan sekarang dan nikmati pengalaman ngopi yang nyaman.
     </p>
 
     <div class="row">
@@ -190,8 +148,7 @@
   <section id="contact" class="contact">
     <h2><span>Kontak</span> Kami</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-      provident.
+      Kami siap mendengar dan membantu kebutuhanmu.
     </p>
 
     <div class="row">
@@ -227,47 +184,11 @@
       <a href="#"><i data-feather="facebook"></i></a>
     </div>
 
-    <div class="links">
-      <a href="#home">Home</a>
-      <a href="#about">Tentang Kami</a>
-      <a href="#menu">Menu</a>
-      <a href="#contact">Kontak</a>
-    </div>
-
     <div class="credit">
       <p>Created by <a href="">Kelompok 4</a>. | &copy; 2025.</p>
     </div>
   </footer>
   <!-- Footer end -->
-
-  <!-- Modal Box Item Detail start -->
-  <!-- <div class="modal" id="item-detail-modal">
-    <div class="modal-container">
-      <a href="#" class="close-icon"><i data-feather="x"></i></a>
-      <div class="modal-content">
-        <img src="img/products/1.jpg" alt="Product 1" />
-        <div class="product-content">
-          <h3>Product 1</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Provident, tenetur cupiditate facilis obcaecati ullam maiores
-            minima quos perspiciatis similique itaque, esse rerum eius
-            repellendus voluptatibus!
-          </p>
-          <div class="product-stars">
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star" class="star-full"></i>
-            <i data-feather="star"></i>
-          </div>
-          <div class="product-price">IDR 30K <span>IDR 55K</span></div>
-          <a href="#"><i data-feather="shopping-cart"></i> <span>add to cart</span></a>
-        </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- Modal Box Item Detail end -->
 
   <!-- Feather Icons -->
   <script>
